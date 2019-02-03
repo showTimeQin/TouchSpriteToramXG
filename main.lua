@@ -120,7 +120,7 @@ elseif version == "1" then
 			-- 每30秒检测一次选单按钮，从没有找到时开始计时，持续10分钟则重启软件
 			while (checkTimes <= 10) do
 				mSleep(30000)
-				if (not isColor(1176,  283, 0x68c99d, 85)) or isColor(596,  589, 0x1a84fe, 95) then
+				if (not isColor(1176,  283, 0x68c99d, 85) or isColor(596,  589, 0x1a84fe, 95)) then
 					toast("检查出掉线..."..checkTimes,1)
 					checkTimes = checkTimes + 1;
 				else
